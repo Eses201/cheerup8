@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood Slider</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #f0f4f7, #d9e3ec);
+        }
+
+        .container {
+            text-align: center;
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 40px;
+            color: #333;
+        }
+
+        .slider-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .emoji {
+            font-size: 2rem;
+            margin-right: 15px;
+        }
+
+        .slider {
+            width: 300px;
+            appearance: none;
+            height: 15px;
+            background: linear-gradient(90deg, #6a89c4 0%, #6ac47e 100%);
+            outline: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .slider::-webkit-slider-thumb {
+            appearance: none;
+            width: 25px;
+            height: 25px;
+            background-color: #fff;
+            border: 2px solid #333;
+            border-radius: 50%;
+        }
+
+        .mood-labels {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            font-size: 1.1rem;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 25px;
+            font-size: 1.2rem;
+            background-color: #6ac47e;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #57a768;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>How do you feel today?</h1>
+        <div class="slider-container">
+            <span class="emoji" id="emoji">😐</span>
+            <input type="range" min="1" max="100" value="50" class="slider" id="moodSlider">
+        </div>
+        <div class="mood-labels">
+            <span>Feeling Down</span>
+            <span>Feeling Good</span>
+        </div>
+        <a href="message.html" class="button">Click if you feel down</a>
+    </div>
+
+    <script>
+        const slider = document.getElementById("moodSlider");
+        const emoji = document.getElementById("emoji");
+
+        slider.addEventListener("input", function() {
+            if (slider.value < 33) {
+                emoji.textContent = "😢";
+            } else if (slider.value < 66) {
+                emoji.textContent = "😐";
+            } else {
+                emoji.textContent = "😊";
+            }
+        });
+    </script>
+
+</body>
+</html>

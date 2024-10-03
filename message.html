@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motivational Message</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #f7f8fc;
+            font-family: Arial, sans-serif;
+        }
+
+        .message-box {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            position: relative;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #333;
+        }
+
+        p {
+            font-size: 1.3rem;
+            color: #555;
+        }
+
+        .reload {
+            margin-top: 20px;
+            font-size: 2rem;
+            cursor: pointer;
+            color: #6ac47e;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            font-size: 1.2rem;
+            background-color: #6ac47e;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #57a768;
+        }
+
+        .hidden-message {
+            display: none;
+            background: #f4f4f4;
+            padding: 20px;
+            border-radius: 15px;
+            border: 1px solid #ddd;
+            margin-top: 40px; /* تمت إضافة مسافة أكثر */
+            font-family: "Caveat", script;
+            font-size: 0.8rem; /* تم تقليص حجم الخط */
+            line-height: 1.8rem; /* لتقليل المسافات بين السطور */
+            white-space: pre-wrap;
+            background-image: url('https://www.toptal.com/designers/subtlepatterns/patterns/lined-paper-2.png');
+        }
+
+        .hidden-message p {
+            margin-bottom: 1.5rem;
+        }
+
+        .hidden-message strong {
+            display: block;
+            margin-top: 1rem;
+        }
+
+        .gif-container {
+            margin-top: -15px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="message-box">
+        <h1>Keep Going!</h1>
+        <p id="message">You are capable of amazing things!</p>
+        <div class="reload" id="reload">&#x21bb;</div>
+        <button class="button" id="readButton">Read This</button>
+        <div class="hidden-message" id="hiddenMessage">
+            Ughhh why does it feel so hard to let you know what in my heart , anyway i’ll just sit on the keyboard and let it do its work …
+‎سويت الهبد ذا لانه لا انتي اللي تتكلمي ولا انا اللي اعرف اعبر ف كنت اهوجس وقتها بالديره وجتني الفكره ادري انه مابيفيد مره وممكن مابيفيد خير شر بس ابغى اعلمك that im trying my best to make you happy and smiling all the time ( مين كان متوقع يوم من الايام بكن كل ذي المشاعر لشخص غلط بأسمي ! ) من اليوم اللي سألتيني فيه عن اختبار الرواية اللي انتي اوريدي كنتي مختبرته ، لين اليوم اقسم بالله انك خليتيني اسعد انسانة بالوجود ( ممكن فيه بالفضاء أسعد مني ماندري بس حالياً خلنا بالارض )
+والله مره صعب ياخي الحروف والكلمات قاعده تهج عني المهم حلا والله انه يوجعني قلبي لما اشوفك حزينه ودي انتي بالذات الحزن مايقرب منك عادي راضيه انا اخذه .
+او لما اشوفك سعيده وتضحكين اهخ GOD WHAT AN ANGEL احس اني ممكن اشوف المنظر ذا العمر كله بدون مااطفش ولا ثانيه ، ولا لما تركزين بالمحاضره اوف ذا حكايه ثانيه او حتى لما تقمعيني بأمسي واصبحي صح يوجع بس ستل سكسي ، خلاصة الموضوع انا مااعرف الان اذا دخلتي وحطيتي feeling down ايش حصل لك بس ابغاك تعرفين that you are my first priority and no matter what i’ll stick behind you وبحرق بسلالة اللي زعلك مو بس هو .
+
+احبك مره كثير واتمنى تكونين سعيده العمر كله
+            <strong>Yours: Shahad</strong>
+            <div class="gif-container">
+                <img src="stitch" alt="GIF" width="100" />
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const readButton = document.getElementById('readButton');
+        const hiddenMessage = document.getElementById('hiddenMessage');
+
+readButton.addEventListener('click', function() {
+    hiddenMessage.style.display = 'block';
+});
+
+const messages = [
+    "No matter how tough things get, I believe in your strength.",
+    "It’s okay to not be okay, but I promise brighter days are coming.",
+    "You’ve gotten through tough times before, and you’ll do it again.",
+    "You don’t have to have everything figured out right now. Just take it one step at a time.",
+    "Even when it feels like the world is against you, remember you’ve overcome worse.",
+    "Take a deep breath. You’ve faced storms before and come out stronger.",
+    "Bad days don’t last forever, and neither will this feeling.",
+    "You deserve the same kindness and patience you give to everyone else.",
+    "Sometimes all you can do is rest, and that’s more than enough.",
+    "It’s okay to slow down and give yourself the space to heal.",
+    "You’re allowed to have hard days without feeling like you’re failing.",
+    "There’s nothing wrong with needing a break or time to just be.",
+    "You’re more resilient than you give yourself credit for.",
+    "Whatever you’re feeling right now, it’s valid, but it won’t define you.",
+    "You’re not defined by your worst moments; you’re defined by how you rise from them.",
+    "Some days are harder than others, but every day is a new chance to start again.",
+    "It’s okay if today isn’t great. There’s always tomorrow.",
+    "You’re doing your best, and that’s more than enough.",
+    "You’ve got so much heart and strength in you, even if it’s hard to see right now.",
+    "Remember, you’re allowed to feel, but don’t let those feelings convince you that you’re not enough.",
+    "Even when it feels like the world is heavy, you’re capable of carrying it.",
+    "You have a heart that’s worth protecting, so take care of it.",
+    "It’s okay to let go of what’s weighing you down. You don’t have to carry it all.",
+    "You’ve made it through 100% of your bad days so far.",
+    "You’re not alone in this, even if it feels like it sometimes.",
+    "Give yourself permission to feel everything without judgment.",
+    "Sometimes, surviving the day is an accomplishment in itself.",
+    "You deserve moments of peace, even on the toughest days.",
+    "Your value doesn’t change because of a bad day. You’re still amazing.",
+    "This won’t last forever, and neither will the weight you’re feeling now."
+];
+
+const messageElement = document.getElementById("message");
+const reloadButton = document.getElementById("reload");
+
+reloadButton.addEventListener("click", function() {
+    const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+    messageElement.textContent = randomMessage;
+});
+</script>
+
+</body>
+</html>
